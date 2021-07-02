@@ -62,6 +62,8 @@ def addrec():
 def addjson():
     try:
         data = request.data
+        print(f"Here is my data using request.data: {request.data}")
+        print(f"Here is my data using request.json: {request.json}")
         json_data = json.loads(str(data, encoding='utf-8'))
         nm = json_data['nm']  # student name
         addr = json_data['addr']  # student street address
